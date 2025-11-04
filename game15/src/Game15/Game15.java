@@ -1,4 +1,4 @@
-
+package Game15;
 
 class Game15 {
     static void main() {
