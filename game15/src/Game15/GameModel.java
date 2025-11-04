@@ -1,4 +1,4 @@
-package game15;
+package Game15;
 
 import java.util.ArrayList;
 import java.util.Collections;
