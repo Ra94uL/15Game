@@ -7,5 +7,8 @@ public class Game15 {
     public static void main(String[] args) {
         GameModel model = new GameModel(4, 4);
         GameView view = new GameView(model);
+
+
+
     }
 }
