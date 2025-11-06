@@ -86,9 +86,9 @@ public class GameView extends JFrame {
     private void handleTileClick(ActionEvent e){
         JButton clickedButton = (JButton) e.getSource();
         int index = Arrays.asList(buttons).indexOf(clickedButton); // enklare än loop
-        boolean moved = model.tryMove(index);
+        boolean moved = model.tryMove(index); // skickar indexet till <- som försöker flytta brickan i logiken
         if (moved){
-            refresh();
+            refresh(); // om flytten lyckas, refresh.
             if (model.isSolved()){
                 JOptionPane.showMessageDialog(this, "Grattis, du vann!",
                         "Vinnare", JOptionPane.INFORMATION_MESSAGE);
@@ -98,9 +98,9 @@ public class GameView extends JFrame {
 
     // Uppdaterar brickor och drag-räknare
     private void refresh(){
-        for (int i = 0; i < model.getSize(); i++) {
-            int value = model.getValueAt(i);
-            JButton btn = buttons[i];
+        for (int i = 0; i < model.getSize(); i++) { // getSize, retunerar board.length (16).
+            int value = model.getValueAt(i); // siffran från modellen
+            JButton btn = buttons[i];  // knappen på skärmen
             if (value == 0){
                 btn.setText("");
                 btn.setEnabled(false);
